@@ -1,0 +1,43 @@
+.register {
+	$self: &;
+	background: linear-gradient(0deg, rgba(0,0,0,0.5) 100%, rgba(0,0,0,0.5) 100%), url('./images/register-bg.png') center left / cover no-repeat transparent;
+	padding: 92px 20px;
+	text-align: center;
+	
+	@include media('<=xxs') {
+		background: linear-gradient(150deg, rgba(55,0,107,0.9) 14%, rgba(207,126,239,0.9) 90%), url('./images/register-bg.png') center left / cover no-repeat transparent;
+	}
+
+	&__text {
+		font-family: "RB", sans-serif;
+		font-size: 48px;
+		line-height: 1.1;
+		color: #fff;
+		margin-bottom: 35px;
+
+		@include media('<=xs') {
+			font-size: 36px;
+		}
+
+		@include media('<=xxs') {
+			font-size: 24px;
+		}
+	}
+
+	&__btn {
+		font-family: "RM", sans-serif;
+		display: block;
+		text-align: center;
+		color: #fff;
+		text-decoration: none;
+		font-size: 20px;
+		line-height: 1.4;
+		background-color: #EC4040;
+		padding: 8px 15px;
+		border-radius: 5px;
+		max-width: 440px;
+		margin: 0 auto;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	}
+
+}
