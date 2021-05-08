@@ -1,0 +1,41 @@
+.events {
+	$self: &;
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+	}
+
+	&__item {
+		box-sizing: border-box;
+		margin: 0 10px 30px;
+		width: calc(99.9% / 3 - 20px);
+		
+		@include media('<=sm') {
+			width: calc(99.9% / 2 - 20px);
+		}
+		
+		@include media('<=xxs') {
+			width: 100%;
+		}
+	}
+
+	&__btn-all {
+		box-sizing: border-box;
+		display: block;
+		max-width: 460px;
+		margin: 0 auto 55px;
+		text-align: center;
+		text-decoration: none;
+		color: $blue;
+		font-family: "RM", sans-serif;
+		font-size: 14px;
+		line-height: 1.5;
+		text-transform: uppercase;
+		border: 1px solid $blue;
+		padding: 14px 10px;
+		border-radius: 4px;
+	}
+
+}

@@ -1,0 +1,116 @@
+.footer {
+	$self: &;
+	background-color: $dark;
+	color: #fff;
+	padding: 30px 0 70px;
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	&__logo {
+		display: inline-block;
+		margin-bottom: 30px;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 -15px;			
+
+		> div {
+			margin: 0 15px 40px;
+		}
+
+		@include media('<md') {
+			justify-content: flex-start;
+			flex-wrap: wrap;
+		}
+	}
+
+	&__info {
+		color: #B6B6B6;
+		max-width: 250px;
+		font-size: 12px;
+		line-height: 1.3;
+	}
+
+	&__info-slogan {
+		display: block;
+		margin-bottom: 25px;
+	}
+
+	&__info-copy {
+
+	}
+
+	&__menu {
+		font-size: 18px;
+
+		> a {
+			display: block;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__contacts {
+
+	}
+
+	&__contacts-info {
+		font-size: 12px;
+		line-height: 1.2;
+
+		> a {
+			display: block;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__title {
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+
+	&__socials {
+		display: flex;
+		justify-content: space-between;
+		max-width: 120px;
+		margin-bottom: 15px;
+	}
+
+	&__social {
+		height: 24px;
+		width: 24px;
+
+		&_fb {
+			background: url('#{$images-path}icons-sprite.svg#icon-soc-fb-view-white') center / 24px 24px no-repeat transparent;
+		}
+
+		&_inst {
+			background: url('#{$images-path}icons-sprite.svg#icon-soc-inst-view-white') center / 24px 24px no-repeat transparent;
+		}
+
+		&_tlg {
+			background: url('#{$images-path}icons-sprite.svg#icon-soc-tlg-view-white') center / 24px 24px no-repeat transparent;
+		}
+	}
+
+	&__apps {
+
+	}
+
+	&__app {
+		display: block;
+
+		&_google {
+
+		}
+
+		&_apple {
+			
+		}
+	}
+
+}

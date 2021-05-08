@@ -1,0 +1,56 @@
+.card {
+	$self: &;
+	box-shadow: 0 1px 5px #c4c4c4;
+	overflow: hidden;
+	border-radius: 4px;
+	padding-bottom: 10px;
+
+	&__image {
+		margin-bottom: 10px;
+		height: 190px;
+
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__title {
+		font-family: "RM", sans-serif;
+		font-size: 20px;
+		line-height: 1.4;
+		padding: 0 15px;
+		margin-bottom: 5px;
+	}
+	
+	&__date {
+		display: block;
+		padding: 0 15px;
+		font-family: "RM", sans-serif;
+		font-size: 14px;
+		line-height: 1.2;
+		color: #646464;
+		margin-bottom: 15px;
+	}
+	
+	&__buttons {
+		padding: 0 15px;
+	}
+	
+	&__btn {
+		display: inline-block;
+		color: $blue;
+		font-size: 14px;
+		text-decoration: none;
+		padding: 5px 15px;
+		background-color: $light;
+		border-radius: 100px;
+		margin-bottom: 10px;
+
+		&:not(:last-child) {
+			margin-right: 5px;
+		}
+	}
+
+}

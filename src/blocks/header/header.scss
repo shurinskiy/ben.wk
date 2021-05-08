@@ -1,0 +1,178 @@
+.header {
+	$self: &;
+	background-color: $lilack;
+	color: #fff;
+	height: 90px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+
+	@include media('<=sm') {
+		height: 56px;
+	}
+
+	&__container {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		margin-right: 30px;
+		line-height: 0;
+		
+		@include media('<=md') {
+			margin-right: 10px;
+		}
+		
+		@include media('<=sm') {
+			max-width: 50px;
+		}
+	}
+
+	&__navi {
+		display: flex;
+		flex-grow: 1;
+		font-size: 18px;
+		
+		@include media('<=sm') {
+			flex-flow: column wrap;
+			align-items: flex-start;
+			font-size: 14px;
+			position: absolute;
+			right: -310px; top: 0;
+			z-index: 11;
+			box-sizing: border-box;
+			max-width: 300px;
+			padding: 80px 8px 40px;
+			background-color: $lilack;
+			transition: right 0.3s ease-in;
+			min-height: 100vh;
+		
+			&.opened {
+				right: 0;
+			}
+		}
+	}
+
+	&__menu-open {
+		display: none;
+		width: 24px;
+		height: 24px;
+		background: url('#{$images-path}icons-sprite.svg#icon-menu-open-view-white') center / 18px 12px no-repeat transparent;
+		cursor: pointer;
+		
+		@include media('<=sm') {
+			display: block;
+		}
+	}
+
+	&__menu-close {
+		display: none;
+		width: 24px;
+		height: 24px;
+		background: url('#{$images-path}icons-sprite.svg#icon-menu-close-view-white') center / 15px 15px no-repeat transparent;
+		cursor: pointer;
+		position: absolute;
+		top: 15px;
+		right: 20px;
+		
+		@include media('<=sm') {
+			display: block;
+		}
+	}
+
+	&__menu {
+		display: flex;
+		
+		@include media('<=sm') {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__menu-item {
+		text-decoration: none;
+		color: inherit;
+		margin: 0 14px;
+		
+		@include media('<=sm') {
+			box-sizing: border-box;
+			width: 100%;
+			margin: 0;
+			padding: 12px 12px 12px 65px;
+			border-radius: 5px;
+
+			&:hover {
+				background-color: #324097;				
+			}
+		}
+	}
+
+	&__lang {
+		margin: 0 20px 0 auto;
+		padding-right: 25px;
+		background: url('#{$images-path}icons-sprite.svg#icon-arr-down-view-white') center right / 12px 8px no-repeat transparent;
+		
+		@include media('<=sm') {
+			display: none;
+		}
+
+		&_mobile {
+			display: none;
+			margin: 0 40px 0 auto;
+			position: relative;
+			z-index: 12;
+		
+			@include media('<=sm') {
+				display: block;
+			}
+		}
+	}
+
+	&__lang-ru {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	&__lang-en {
+		display: none;
+		text-decoration: none;
+		color: inherit;
+	}
+
+	&__lang-mobile {
+		display: none;
+		
+		@include media('<=sm') {
+			display: block;
+			box-sizing: border-box;
+			width: 100%;
+			margin: 0;
+			padding: 12px 12px 12px 65px;
+			border-radius: 5px;
+
+			&:hover {
+				background-color: #324097;				
+			}
+		}
+	}
+
+	&__register {
+		text-decoration: none;
+		color: inherit;
+		
+		@include media('<=sm') {
+			box-sizing: border-box;
+			width: 100%;
+			margin: 0;
+			padding: 12px 12px 12px 65px;
+			border-radius: 5px;
+			order: -1;
+
+			&:hover {
+				background-color: #324097;				
+			}
+		}
+	}
+}
