@@ -1,0 +1,100 @@
+.feed {
+	$self: &;
+
+	&__inner {
+
+	}
+
+	&__title {
+		margin-bottom: 24px;
+
+		@include media('<=lg') {
+
+		}
+	}
+	
+	&__tags {
+		margin-bottom: 18px;
+
+		@include media('<=lg') {
+			
+		}
+	}
+
+	&__items {
+		padding-bottom: 140px;
+		
+		@include media('<=xs') {
+			padding-bottom: 100px;
+		}
+		
+		@include media('<=xxxs') {
+			padding-bottom: 140px;
+			margin-bottom: -20px;
+		}
+
+		.swiper-wrapper {
+			z-index: 2;
+		}
+	}
+
+	&__item {
+		height: auto;
+
+		&_last {
+			box-sizing: border-box;
+			background-color: $base;
+			border-radius: 4px;
+			padding: 50px 24px;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-family: "RB", sans-serif;
+			font-size: 40px;
+			color: #fff;
+			
+			@include media('<=xlg') {
+				font-size: 36px;
+			}
+			
+			@include media('<=md') {
+				font-size: 32px;
+			}
+
+			&::after {
+				display: block;
+				content: '';
+				width: 80px;
+				height: 70px;
+				background: url('#{$images-path}icons-sprite.svg#icon-arr-right-view-white') center / contain no-repeat transparent;
+			}
+
+			span {
+				display: block;
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	&__navigation {
+		position: absolute;
+		bottom: 80px;
+		left: 0;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 1;
+
+		@include media('<=xs') {
+			display: none;
+		}
+	}
+
+	&__prev {
+
+	}
+
+	&__next {
+
+	}
+}

@@ -1,0 +1,70 @@
+.more {
+	$self: &;
+	background: linear-gradient(45deg, #D9DDFF 0%, #F6F6F6 50%, #FCCCC3 100%);
+
+	&__inner {
+		padding-top: 24px;
+		padding-bottom: 24px;
+		display: flex;
+		align-items: center;
+
+		@include media('<=lg') {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__text {
+		box-sizing: border-box;
+		color: #4d4d4d;
+		font-family: "RM", sans-serif;
+		line-height: 1.5;
+		flex-grow: 100;
+		max-width: 720px;
+		padding-right: 20px;
+		
+		@include media('<=lg') {
+			padding: 0;
+			margin: 0 auto 20px;
+		}
+	}
+	
+	&__links {
+		display: flex;
+		align-items: center;
+		flex-grow: 1;
+		justify-content: flex-end;
+		
+		@include media('<=lg') {
+			justify-content: center;
+		}
+		
+		@include media('<=xxs') {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__link {
+		
+		&_more {
+			font-family: "RM", sans-serif;
+			margin-right: 40px;
+			white-space: nowrap;
+			text-align: center;
+			color: #4d4d4d;
+
+			@include media('<=xxs') {
+				margin: 0;
+				width: 100%;
+				order: 1;
+			}
+		}
+
+		&_register {
+
+			@include media('<=xxs') {
+				margin-bottom: 20px;
+			}
+			
+		}
+	}
+}

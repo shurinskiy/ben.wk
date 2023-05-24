@@ -1,0 +1,109 @@
+.lang {
+	$self: &;
+	display: flex;
+	align-items: center;
+	position: relative;
+	flex-shrink: 0;
+	width: 105px;
+
+	@keyframes fadeIn {
+		from { opacity: 0;}
+		to { opacity: 1; }
+	}
+
+	&::before {
+		display: block;
+		content: '';
+		width: 32px;
+		height: 24px;
+		border-radius: 8px;
+		border: 1px solid #dedede;
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&_ru {
+		&::before {
+			background-image: url('#{$images-path}flag-ru.png');
+		}
+
+		#{$self}__link_ru {
+			display: block;
+			order: -1;
+		}
+	}
+	
+	&_en {
+		&::before {
+			background-image: url('#{$images-path}flag-en.png');
+		}
+
+		#{$self}__link_en {
+			display: block;
+			order: -1;
+		}
+	}
+	
+	&_kz {
+		&::before {
+			background-image: url('#{$images-path}flag-kz.png');
+		}
+
+		#{$self}__link_kz {
+			display: block;
+			order: -1;
+		}
+	}
+
+	&__links {
+		box-sizing: border-box;
+		position: absolute;
+		width: 65px;
+		z-index: 1;
+		right: 0;
+		top: 0;
+		display: flex;
+		flex-flow: column nowrap;
+		border-radius: 8px;
+		padding: 0 8px;
+
+		&::before {
+			display: block;
+			content: '';
+			width: 10px;
+			height: 6px;
+			background: url('#{$images-path}icons-sprite.svg#icon-down-view-black') center / contain no-repeat transparent;
+			transition: transform 0.2s;
+			position: absolute;
+			right: 10px;
+			top: 10px;
+		}
+
+		&:hover {
+			background-color: #fff;
+			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+			
+			#{$self}__link {
+				display: block;
+			}
+
+			&::before {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__link {
+		display: none;
+		padding: 3px 0;
+		font-family: "RM", sans-serif;
+		text-decoration: none;
+		color: #000;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

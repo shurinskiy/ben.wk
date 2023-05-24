@@ -1,0 +1,45 @@
+.tags {
+	$self: &;
+	display: flex;
+	flex-flow: row wrap;
+	margin-left: -8px;
+	margin-right: -8px;
+	
+	@include media('<=md') {
+		margin-left: -4px;
+		margin-right: -4px;
+	}
+
+	&__link {
+		display: inline-block;
+		font-family: "RM", sans-serif;
+		text-decoration: none;
+		border-radius: 50px;
+		padding: 10px 16px;
+		border: 1px solid $base;
+		color: $base;
+		margin: 0 8px 16px;
+		transition: background-color 0.2s;
+		
+		@include media('<=md') {
+			padding: 8px 12px;
+			font-size: 14px;
+			margin: 0 4px 8px;
+		}
+		
+		@include media('<=xs') {
+			padding: 6px 12px;
+			font-size: 12px;
+		}
+	
+		&.active {
+			background-color: $base;
+			color: #fff;
+		}
+		
+		&:hover {
+			background-color: $base;
+			color: #fff;
+		}
+	}
+}

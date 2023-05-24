@@ -1,0 +1,117 @@
+@import "lib/additional.scss"; 
+@include reset(); 
+
+// Include breakpoints badge
+// body { @include screen-media(); }
+
+$base: #343C88;
+$accent: #F55D3E;
+
+// Import media-query helper
+@import "../../node_modules/include-media/dist/_include-media.scss";
+
+$breakpoints: (
+	'xxxs': 360px,
+	'xxs': 480px,
+	'xs': 640px,
+	'sm': 780px,
+	'md': 960px,
+	'lg': 1100px,
+	'xlg': 1280px,
+	'xxlg': 1440px,
+	'xxxlg': 1680px,
+	'xxxxlg': 1920px
+);
+
+// Import animate-scss
+// @import
+	// "../../node_modules/animate-scss/_properties.scss",
+	// "../../node_modules/animate-scss/_attention-seekers/attention-seekers.scss",
+	// "../../node_modules/animate-scss/_bouncing-entrances/bouncing-entrances.scss",
+	// "../../node_modules/animate-scss/_bouncing-exits/bouncing-exits.scss",
+	// "../../node_modules/animate-scss/_fading-entrances/fading-entrances.scss",
+	// "../../node_modules/animate-scss/_fading-exits/fading-exits.scss",
+	// "../../node_modules/animate-scss/_flippers/flippers.scss",
+	// "../../node_modules/animate-scss/_lightspeed/lightspeed.scss",
+	// "../../node_modules/animate-scss/_rotating-entrances/rotating-entrances.scss",
+	// "../../node_modules/animate-scss/_rotating-exits/rotating-exits.scss",
+	// "../../node_modules/animate-scss/_sliding-entrances/sliding-entrances.scss",
+	// "../../node_modules/animate-scss/_sliding-exits/sliding-exits.scss",
+	// "../../node_modules/animate-scss/_specials/specials.scss",
+	// "../../node_modules/animate-scss/_zooming-exits/zooming-exits.scss",
+	// "../../node_modules/animate-scss/_zooming-entrances/zooming-entrances.scss";
+
+
+@include font-face("Roboto-Regular", "RR");
+@include font-face("Roboto-Light", "RL");
+@include font-face("Roboto-Thin", "RT");
+@include font-face("Roboto-Medium", "RM");
+@include font-face("Roboto-Bold", "RB");
+@include font-face("Roboto-Black", "RBL");
+@import "../../node_modules/swiper/swiper";
+
+// Import BEM blocks scss
+@import "../blocks/**/*.scss";
+
+body, html {
+	box-sizing: border-box;
+	font-size: #{$basesize}px;
+	line-height: 1.2;
+	font-family: "RR", sans-serif;
+	background-color: #f5f5f5;
+	min-height: 100vh;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+// .main { flex: 1 0 auto; }
+.footer { 
+	flex: 0 0 auto; 
+	margin-top: auto; 
+}
+
+
+p { margin-bottom: 10px; }
+strong { font-weight: bold; }
+em { font-style: italic; }
+
+.mt1 { margin-top: 12px; }
+.mt2 { margin-top: 24px; }
+.mt3 { margin-top: 48px; }
+
+.mb1 { margin-bottom: 12px; }
+.mb2 { margin-bottom: 24px; }
+.mb3 { margin-bottom: 48px; }
+
+.mbt1 { margin-top: 12px; margin-bottom: 12px; }
+.mbt2 { margin-top: 24px; margin-bottom: 24px; }
+.mbt3 { margin-top: 48px; margin-bottom: 48px; }
+
+			
+@include media('<=xs') {
+	.mt1 { margin-top: 10px; }
+	.mt2 { margin-top: 20px; }
+	.mt3 { margin-top: 40px; }
+	
+	.mb1 { margin-bottom: 10px; }
+	.mb2 { margin-bottom: 20px; }
+	.mb3 { margin-bottom: 40px; }
+	
+	.mbt1 { margin-top: 10px; margin-bottom: 10px; }
+	.mbt2 { margin-top: 20px; margin-bottom: 20px; }
+	.mbt3 { margin-top: 40px; margin-bottom: 40px; }
+}
+
+@include media('<=xxs') {
+	.mt1 { margin-top: 5px; }
+	.mt2 { margin-top: 15px; }
+	.mt3 { margin-top: 30px; }
+	
+	.mb1 { margin-bottom: 5px; }
+	.mb2 { margin-bottom: 15px; }
+	.mb3 { margin-bottom: 30px; }
+	
+	.mbt1 { margin-top: 5px; margin-bottom: 5px; }
+	.mbt2 { margin-top: 15px; margin-bottom: 15px; }
+	.mbt3 { margin-top: 30px; margin-bottom: 30px; }
+}

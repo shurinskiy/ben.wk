@@ -1,0 +1,51 @@
+.button {
+	$self: &;
+	@extend %reset-button;
+	display: inline-flex;
+	align-items: center;
+	padding: 12px 16px;
+	border-radius: 4px;
+	background-color: $base;
+	box-shadow: 0px 4px 12px rgba(52, 60, 136, 0.4);
+	font-family: "RM", sans-serif;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #fff;
+	flex-shrink: 0;
+	
+	&::before {
+		display: none;
+		content: '';
+		width: 24px;
+		height: 24px;
+		margin-right: 8px;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: transparent;
+	}
+	
+	&_accent {
+		background-color: $accent;
+		box-shadow: 0px 4px 12px rgba(245, 93, 62, 0.4);
+	}
+
+	&_login::before {
+		display: block;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-user-view-white');
+		background-size: 18px 20px;
+	}
+	
+	&_pending::before {
+		display: block;
+		background-image: url('#{$images-path}loader.svg');
+	}
+	
+	&_menu::before {
+		display: block;
+		background-image: url('#{$images-path}icons-sprite.svg#icon-menu-view-white');
+		background-size: 20px 16px;
+		margin: 0;
+	}
+}

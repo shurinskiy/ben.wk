@@ -1,0 +1,139 @@
+@@include("_head.html", {"class":"home"}) 
+@@include("_header.html")
+
+<section class="hero">
+	<div class="hero__slider swiper">
+		<div class="swiper-wrapper">
+			<a class="hero__slide swiper-slide" href="./">
+				<img src="./images/hero-image-1.png" alt="">
+			</a>
+			<a class="hero__slide swiper-slide" href="./">
+				<img src="./images/hero-image-2.png" alt="">
+			</a>
+		</div>
+		<div class="hero__navi container sw-navi">
+			<button class="hero__prev sw-navi__prev"></button>
+			<button class="hero__next sw-navi__next"></button>
+		</div>
+	</div>
+</section>
+
+<section class="feed">
+	<div class="feed__inner container">
+		<h2 class="feed__title title">
+			<span>События</span>
+			<a href="./">смотреть все...</a>
+		</h2>
+		<div class="feed__tags tags">
+			<a class="tags__link active" href="./">Ближайшие</a>
+			<a class="tags__link" href="./">В Алматы</a>
+			<a class="tags__link" href="./">В Астане</a>
+			<a class="tags__link" href="./">Онлайн</a>
+			<a class="tags__link" href="./">Оффлайн</a>
+			<a class="tags__link" href="./">Бесплатные</a>
+			<a class="tags__link" href="./">Платные</a>
+		</div>
+		<div class="feed__items swiper">
+			<div class="swiper-wrapper">
+				@@include("_ev-card.html", {cls: "feed__item swiper-slide"})
+				@@include("_ev-card.html", {cls: "feed__item swiper-slide"})
+				@@include("_ev-card.html", {cls: "feed__item swiper-slide"})
+				@@include("_ev-card.html", {cls: "feed__item swiper-slide"})
+				@@include("_ev-card.html", {cls: "feed__item swiper-slide"})
+				<a class="card feed__item feed__item_last swiper-slide" href="./">
+					<span>Смотреть<br> все события</span>
+				</a>
+			</div>
+			<div class="feed__navigation sw-navi">
+				<button class="feed__prev sw-navi__prev"></button>
+				<button class="feed__next sw-navi__next"></button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="feed">
+	<div class="feed__inner container">
+		<h2 class="feed__title title">
+			<span>Эксперты</span>
+			<a href="./">смотреть всех...</a>
+		</h2>
+		<div class="feed__tags tags">
+			<a class="tags__link active" href="./">IT проекты</a>
+			<a class="tags__link" href="./">Маркетинг</a>
+			<a class="tags__link" href="./">Ритейл</a>
+			<a class="tags__link" href="./">Продажи</a>
+			<a class="tags__link" href="./">Менеджмент</a>
+			<a class="tags__link" href="./">Консалтинг</a>
+			<a class="tags__link" href="./">Финансы</a>
+		</div>
+		<div class="feed__items swiper">
+			<div class="swiper-wrapper">
+				@@include("_ex-card.html", {cls: "feed__item swiper-slide", rate: 2.2})
+				@@include("_ex-card.html", {cls: "feed__item swiper-slide", rate: 3.7})
+				@@include("_ex-card.html", {cls: "feed__item swiper-slide", rate: 2.6})
+				@@include("_ex-card.html", {cls: "feed__item swiper-slide", rate: 3.4})
+				@@include("_ex-card.html", {cls: "feed__item swiper-slide", rate: 4.8})
+				<a class="card feed__item feed__item_last swiper-slide" href="./">
+					<span>Смотреть<br> все события</span>
+				</a>
+			</div>
+			<div class="feed__navigation sw-navi">
+				<button class="feed__prev sw-navi__prev"></button>
+				<button class="feed__next sw-navi__next"></button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="partners">
+	<div class="partners__inner container">
+		<h2 class="partners__title title mb2">С нами работают:</h2>
+		<div class="partners__slider swiper">
+			<div class="swiper-wrapper">
+				<a class="partners__slide swiper-slide" href="./">
+					<img src="./images/partner-image-1.png" alt="">
+				</a>
+				<a class="partners__slide swiper-slide" href="./">
+					<img src="./images/partner-image-5.png" alt="">
+				</a>
+				<a class="partners__slide swiper-slide" href="./">
+					<img src="./images/partner-image-2.png" alt="">
+				</a>
+				<a class="partners__slide swiper-slide" href="./">
+					<img src="./images/partner-image-6.png" alt="">
+				</a>
+				<a class="partners__slide swiper-slide" href="./">
+					<img src="./images/partner-image-3.png" alt="">
+				</a>
+				<a class="partners__slide swiper-slide" href="./">
+					<img src="./images/partner-image-1.png" alt="">
+				</a>
+				<a class="partners__slide swiper-slide" href="./">
+					<img src="./images/partner-image-4.png" alt="">
+				</a>
+				<a class="partners__slide swiper-slide" href="./">
+					<img src="./images/partner-image-2.png" alt="">
+				</a>
+				<a class="partners__slide swiper-slide" href="./">
+					<img src="./images/partner-image-3.png" alt="">
+				</a>
+				<a class="partners__slide swiper-slide" href="./">
+					<img src="./images/partner-image-4.png" alt="">
+				</a>
+				<a class="partners__slide swiper-slide" href="./">
+					<img src="./images/partner-image-5.png" alt="">
+				</a>
+				<a class="partners__slide swiper-slide" href="./">
+					<img src="./images/partner-image-6.png" alt="">
+				</a>
+			</div>
+			<div class="partners__navi sw-navi">
+				<button class="partners__prev sw-navi__prev"></button>
+				<button class="partners__next sw-navi__next"></button>
+			</div>
+		</div>
+	</div>
+</section>
+
+@@include("_bottom.html")

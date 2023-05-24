@@ -1,0 +1,25 @@
+.rating {
+	$self: &;
+	display: flex;
+
+	&_small {
+		#{$self}__star {
+			width: 13px;
+			height: 12px;
+		}
+	}
+
+	&__star {
+		width: 17px;
+		height: 16px;
+		background: url('#{$images-path}icons-sprite.svg#icon-star-view-orange') center / contain no-repeat transparent;
+		
+		&.active {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-star-fill-view-orange');
+		}
+
+		&:not(:last-child) {
+			margin-right: 4px;
+		}
+	}
+}

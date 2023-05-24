@@ -1,0 +1,63 @@
+.partners {
+	$self: &;
+
+	&__inner {
+
+	}
+
+	&__title {
+
+	}
+
+	&__slider {
+		box-sizing: border-box;
+		height: 440px;
+		padding-bottom: 120px;
+		
+		.swiper-wrapper {
+			display: flex;
+			flex-flow: column wrap;
+		}
+		
+		@include media('<=xs') {
+			padding-bottom: 50px;
+		}
+	}
+
+	&__slide {
+		box-sizing: border-box;
+		height: 50% !important;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		filter: saturate(0%) brightness(120%);
+		transition: filter 0.5s;
+		padding: 0 20px;
+
+		&:hover {
+			filter: none;
+		}
+	}
+
+	&__navi {
+		position: absolute;
+		bottom: 60px;
+		left: 0;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include media('<=xs') {
+			display: none;
+		}
+	}
+
+	&__prev {
+
+	}
+	
+	&__next {
+
+	}
+}
