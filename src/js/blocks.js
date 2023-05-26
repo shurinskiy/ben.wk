@@ -1,4 +1,3 @@
-
 import "../blocks/feed/feed.js";
 import "../blocks/header/header.js";
 import "../blocks/hero/hero.js";

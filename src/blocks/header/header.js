@@ -1,4 +1,3 @@
-import scrollLock from 'scroll-lock';
 import { menuToggle } from "../../js/libs/menuToggle";
 
 (() => {
@@ -10,7 +9,6 @@ import { menuToggle } from "../../js/libs/menuToggle";
 	const toggles = $header.querySelectorAll('.header__navi-toggle, .h-navi__close');
 	
 	const menu = menuToggle(navi, toggles, {
-		scrollLock: scrollLock,
 		omitToClose: '.modal',
 		class: 'opened'
 	});
@@ -26,10 +24,6 @@ import { menuToggle } from "../../js/libs/menuToggle";
 			document.documentElement.style.setProperty('--vh', `${e.target.height * 0.01}px`);
 		});
 	});
-
-	// для совместимости со скрывающимся сайдбаром
-	document.querySelector('.aside__toggle')?.addEventListener('click', (e) => menu.menuClose());
-
 
 	document.addEventListener("scroll", (e) => {
 		$header.classList[(e.target.documentElement.scrollTop > 30) ? 'add':'remove']('header_scrolled');
