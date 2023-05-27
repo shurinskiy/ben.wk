@@ -1,32 +1,19 @@
-import { menuToggle } from "../../js/libs/menuToggle";
-
 (() => {
+	// поведение хедера при скролле
 	const $header = document.querySelector('.header');
-	if(!$header) return;
-	
-	const vh = window.visualViewport.height * 0.01;
-	const navi = $header.querySelector('.header__navi');
-	const toggles = $header.querySelectorAll('.header__navi-toggle, .h-navi__close');
-	
-	const menu = menuToggle(navi, toggles, {
-		omitToClose: '.modal',
-		class: 'opened'
+
+	document.addEventListener("scroll", (e) => {
+		$header.classList[(e.target.documentElement.scrollTop > 30) ? 'add':'remove']('header_scrolled');
 	});
-
-	// открытие и закрытие меню, свайпом на мобильных устройствах
-	navi.addEventListener('swiped-left', (e) => menu.menuClose(e));
-
+	
 	// решение проблемы 100vh для меню на мобильных устройствах
+	const vh = window.visualViewport.height * 0.01;
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
 	
 	window.visualViewport.addEventListener('resize', (e) => {
 		requestAnimationFrame(() => {
 			document.documentElement.style.setProperty('--vh', `${e.target.height * 0.01}px`);
 		});
-	});
-
-	document.addEventListener("scroll", (e) => {
-		$header.classList[(e.target.documentElement.scrollTop > 30) ? 'add':'remove']('header_scrolled');
 	});
 
 })();

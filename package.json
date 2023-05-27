@@ -64,6 +64,7 @@
 	},
 	"dependencies": {
 		"scroll-lock": "^2.1.5",
+		"swiped-events": "^1.1.7",
 		"swiper": "^9.3.2"
 	}
 }
