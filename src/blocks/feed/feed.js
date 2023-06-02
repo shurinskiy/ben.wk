@@ -2,7 +2,7 @@ import Swiper, { Navigation } from 'swiper';
 
 (() => {
 
-	document.querySelectorAll('.feed__items').forEach(($slider, i) => {
+	document.querySelectorAll('.feed__slider').forEach(($slider, i) => {
 		let swiper = new Swiper($slider, {
 			modules: [Navigation],
 			navigation: {
@@ -46,7 +46,7 @@ import Swiper, { Navigation } from 'swiper';
 		});
 	});
 
-	document.querySelectorAll('.feed__item:not(.feed__item_last)').forEach(($item) => {
+	document.querySelectorAll('.feed__slide:not(.feed__slide_last)').forEach(($item) => {
 		$item.addEventListener('mouseenter', (e) => {
 			let height = $item.querySelector(':first-child').clientHeight;
 

@@ -7,21 +7,13 @@
 
 	&__title {
 		margin-bottom: 24px;
-
-		@include media('<=lg') {
-
-		}
 	}
 	
 	&__tags {
 		margin-bottom: 18px;
-
-		@include media('<=lg') {
-			
-		}
 	}
 
-	&__items {
+	&__slider {
 		padding-bottom: 140px;
 		
 		@include media('<=xs') {
@@ -32,13 +24,12 @@
 			padding-bottom: 140px;
 			margin-bottom: -20px;
 		}
-
+	
 		.swiper-wrapper {
 			z-index: 2;
 		}
 	}
-
-	&__item {
+	&__slide {
 		height: auto;
 
 		&_last {

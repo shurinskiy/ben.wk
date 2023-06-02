@@ -1,0 +1,41 @@
+.form {
+	$self: &;
+
+	&__field {
+
+	}
+
+	&__input {
+		@extend %reset-input;
+		display: block;
+		width: 100%;			
+		border-radius: 4px;
+		border: 1px solid #dedede;
+		padding: 4px 16px;
+		height: 48px;
+
+		&::placeholder {
+			color: #999;
+		}
+	}
+
+	&__error {
+		height: 16px;
+		display: block;
+		color: #EC0000;
+		font-size: 12px;
+		padding: 2px;
+	}
+
+	&__button {
+		@extend %reset-button;
+		background-color: $base;
+		color: #fff;
+		border-radius: 4px;
+		font-family: "RM", sans-serif;
+		font-size: 16px;
+		padding: 14px;
+		text-align: center;
+		width: 100%;
+	}
+}

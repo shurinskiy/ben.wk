@@ -1,0 +1,114 @@
+.f-login {
+	$self: &;
+
+	&__title {
+		font-family: "RM", sans-serif;
+		color: #4d4d4d;
+		font-size: 24px;
+		text-align: center;
+		margin-bottom: 12px;
+	}
+	
+	&__t-text {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-bottom: 32px;
+		
+		span {
+			margin-right: 10px;
+		}
+		
+		a {
+			font-family: "RM", sans-serif;
+			color: $accent;
+		}
+	}
+	
+	&__t-note {
+		color: #999;
+		font-size: 12px;
+		max-width: 250px;
+		text-align: center;
+		margin: 0 auto 20px;
+	}
+	
+	&__form {
+		
+	}
+	
+	&__field {
+		margin-bottom: 8px;
+	}
+	
+	&__button {
+		margin-bottom: 30px;
+	}
+
+	&__forget {
+		display: block;
+		text-align: center;
+		font-family: "RM", sans-serif;
+		margin-bottom: 30px;
+		color: $base;
+	}
+	
+	&__separator {
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+
+		&::before, &::after {
+			display: block;
+			content: '';
+			flex-grow: 1;
+			height: 1px;
+			background-color: #dedede;
+		}
+
+		span {
+			margin: 0 12px;
+		}
+	}
+
+	&__socials {
+
+	}
+
+	&__social {
+		display: flex;
+		align-items: center;
+		box-sizing: border-box;
+		border: 1px solid #dedede;
+		font-family: "RM", sans-serif;
+		text-decoration: none;
+		border-radius: 4px;
+		padding: 0 16px;
+		color: #000;
+		height: 48px;
+
+		&::before {
+			display: block;
+			content: '';
+			width: 24px;
+			height: 24px;
+			margin-right: 16px;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-color: transparent;
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+
+		&_gl::before { background-image: url('#{$images-path}ic-soc-gl.svg'); }
+		&_fb::before { background-image: url('#{$images-path}ic-soc-fb.svg'); }
+		&_in::before { background-image: url('#{$images-path}ic-soc-in.svg'); }
+	}
+}
