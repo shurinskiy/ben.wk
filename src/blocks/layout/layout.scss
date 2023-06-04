@@ -1,0 +1,22 @@
+.layout {
+	$self: &;
+	display: grid;
+	grid-template-columns: 290px 1fr;
+	grid-gap: 24px;
+
+	&__aside {
+		grid-column: span 1;
+
+		&_blind {
+
+		}
+	}
+
+	&__a-inner {
+		
+	}
+	
+	&__main {
+		grid-column: span 1;
+	}
+}

@@ -46,18 +46,4 @@ import Swiper, { Navigation } from 'swiper';
 		});
 	});
 
-	document.querySelectorAll('.feed__slide:not(.feed__slide_last)').forEach(($item) => {
-		$item.addEventListener('mouseenter', (e) => {
-			let height = $item.querySelector(':first-child').clientHeight;
-
-			$item.style.height = `${height}px`;
-			$item.classList.add('hover');
-		});
-		
-		$item.addEventListener('mouseleave', (e) => {
-			$item.style.height = '';
-			$item.classList.remove('hover');
-		});
-	});
-
 })();

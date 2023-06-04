@@ -1,0 +1,96 @@
+@@include("_head.html", {"class":"home"})
+@@include("_header.html")
+
+<div class="breadcrumbs">
+	<div class="breadcrumbs__inner container">
+		<a href="./">Главная страница</a>
+		<span>Эксперты</span>
+	</div>
+</div>
+
+<div class="layout container">
+	<aside class="layout__aside layout__aside_blind">
+		<div class="layout__a-inner filter">
+			<div class="filter__block">
+				<h3 class="filter__title">Участие</h3>
+				<div class="filter__items">
+					<button class="filter__item">Онлайн</button>
+					<button class="filter__item">Офлайн</button>
+				</div>
+			</div>
+			<div class="filter__block">
+				<h3 class="filter__title">Языки</h3>
+				<div class="filter__items">
+					<button class="filter__item">Казахский</button>
+					<button class="filter__item">Русский</button>
+					<button class="filter__item">Английский</button>
+				</div>
+			</div>
+			<div class="filter__block">
+				<h3 class="filter__title">Формат</h3>
+				<div class="filter__items">
+					<button class="filter__item">Платные</button>
+					<button class="filter__item">Бесплатные</button>
+					<button class="filter__item">Скидки</button>
+				</div>
+			</div>
+			<div class="filter__block">
+				<h3 class="filter__title">Город</h3>
+				<div class="filter__items">
+					<button class="filter__item">Алматы</button>
+					<button class="filter__item">Астана</button>
+					<button class="filter__item">Шымкент</button>
+					<button class="filter__item">Актобе</button>
+					<button class="filter__item">Караганда</button>
+					<button class="filter__item">Тараз</button>
+					<button class="filter__item">Талдыкурган</button>
+					<button class="filter__item">Оскемен</button>
+					<button class="filter__item">Семей</button>
+					<button class="filter__item">Павлодар</button>
+				</div>
+				<button class="filter__showall">Показать все</button>
+			</div>
+			<div class="filter__block">
+				<h3 class="filter__title">Направление</h3>
+				<div class="filter__form">
+					<input class="filter__form-search" type="text" placeholder="Поиск по направлениям">
+					<button class="filter__form-submit" type="submit"></button>
+				</div>
+				<div class="filter__items">
+					<button class="filter__item">Маркетинг</button>
+					<button class="filter__item">IT</button>
+					<button class="filter__item">Управление</button>
+					<button class="filter__item">Экономика</button>
+					<button class="filter__item">Финансы</button>
+					<button class="filter__item">Продажи</button>
+					<button class="filter__item">Дизайн</button>
+					<button class="filter__item">Медиа</button>
+					<button class="filter__item">Менеджмент</button>
+					<button class="filter__item">Трудоустройство</button>
+				</div>
+				<button class="filter__showall">Показать все</button>
+			</div>
+			<button class="filter__clear">Очистить</button>
+		</div>
+	</aside>
+	<main class="layout__main catalog">
+		<div class="catalog__items">
+			@@include("_ex-card.html", {cls: "catalog__item card-ex_blind", rate: 2.1})
+			@@include("_ex-card.html", {cls: "catalog__item card-ex_blind", rate: 3.3})
+			@@include("_ex-card.html", {cls: "catalog__item card-ex_blind", rate: 4.2})
+			@@include("_ex-card.html", {cls: "catalog__item card-ex_blind", rate: 4.8})
+			@@include("_ex-card.html", {cls: "catalog__item card-ex_blind", rate: 1.2})
+			@@include("_ex-card.html", {cls: "catalog__item card-ex_blind", rate: 3.4})
+			@@include("_ex-card.html", {cls: "catalog__item card-ex_blind", rate: 3.7})
+			@@include("_ex-card.html", {cls: "catalog__item card-ex_blind", rate: 5.0})
+			@@include("_ex-card.html", {cls: "catalog__item card-ex_blind", rate: 4.3})
+		</div>
+		<div class="catalog__navi sw-navi">
+			<div class="catalog__navi-count">События <span>1</span> - <span>12</span> из <span>124</span></div>
+			<button class="feed__prev sw-navi__prev"></button>
+			<button class="feed__next sw-navi__next"></button>
+		</div>
+	</main>
+</div>
+
+@@include("_bottom.html")

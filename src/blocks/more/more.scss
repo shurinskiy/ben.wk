@@ -1,5 +1,6 @@
 .more {
 	$self: &;
+	margin-top: auto; 
 	background: linear-gradient(45deg, #D9DDFF 0%, #F6F6F6 50%, #FCCCC3 100%);
 
 	&__inner {

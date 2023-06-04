@@ -9,11 +9,12 @@
 		to { max-height: 200px; }
 	}
 
-	&.hover {
+	&_blind.hover {
 		
 		#{$self}__body {
 			border-color: $accent;
 			position: absolute;
+			z-index: 2;
 			width: 100%;
 			top: 0;
 		}

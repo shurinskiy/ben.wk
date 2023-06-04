@@ -58,7 +58,7 @@ body, html {
 	font-size: #{$basesize}px;
 	line-height: 1.2;
 	font-family: "RR", sans-serif;
-	background-color: #f5f5f5;
+	background-color: #f8f8f8;
 }
 
 #q-app {
@@ -70,51 +70,9 @@ body, html {
 // .main { flex: 1 0 auto; }
 .footer { 
 	flex: 0 0 auto; 
-	margin-top: auto; 
 }
 
 
 p { margin-bottom: 10px; }
 strong { font-weight: bold; }
 em { font-style: italic; }
-
-/* .mt1 { margin-top: 12px; }
-.mt2 { margin-top: 24px; }
-.mt3 { margin-top: 48px; }
-
-.mb1 { margin-bottom: 12px; }
-.mb2 { margin-bottom: 24px; }
-.mb3 { margin-bottom: 48px; }
-
-.mbt1 { margin-top: 12px; margin-bottom: 12px; }
-.mbt2 { margin-top: 24px; margin-bottom: 24px; }
-.mbt3 { margin-top: 48px; margin-bottom: 48px; }
-
-			
-@include media('<=xs') {
-	.mt1 { margin-top: 10px; }
-	.mt2 { margin-top: 20px; }
-	.mt3 { margin-top: 40px; }
-	
-	.mb1 { margin-bottom: 10px; }
-	.mb2 { margin-bottom: 20px; }
-	.mb3 { margin-bottom: 40px; }
-	
-	.mbt1 { margin-top: 10px; margin-bottom: 10px; }
-	.mbt2 { margin-top: 20px; margin-bottom: 20px; }
-	.mbt3 { margin-top: 40px; margin-bottom: 40px; }
-}
-
-@include media('<=xxs') {
-	.mt1 { margin-top: 5px; }
-	.mt2 { margin-top: 15px; }
-	.mt3 { margin-top: 30px; }
-	
-	.mb1 { margin-bottom: 5px; }
-	.mb2 { margin-bottom: 15px; }
-	.mb3 { margin-bottom: 30px; }
-	
-	.mbt1 { margin-top: 5px; margin-bottom: 5px; }
-	.mbt2 { margin-top: 15px; margin-bottom: 15px; }
-	.mbt3 { margin-top: 30px; margin-bottom: 30px; }
-} */

@@ -1,0 +1,27 @@
+.breadcrumbs {
+	$self: &;
+	margin-bottom: 20px;
+
+	&__inner {
+		padding-top: 25px;
+		
+		a {
+			display: inline-block;
+			padding: 5px 5px 5px 0;
+			color: $base;
+
+			&:not(:last-child)::after {
+				display: inline-block;
+				content: '>';
+				font-family: "RM", sans-serif;
+				padding-left: 10px;
+			}
+		}
+		
+		span {
+			display: inline-block;
+			padding: 5px 0 5px;
+			color: #999;
+		}
+	}
+}
