@@ -8,19 +8,24 @@
 		to { max-height: 200px; }
 	}
 
-	&_blind.hover {
-		
-		#{$self}__body {
-			border-color: $accent;
-			position: absolute;
-			z-index: 2;
-			width: 100%;
-			top: 0;
+	&_blind {
+		@include media('<=xxs') {
+			clear: both;
 		}
 
-		#{$self}__hidden {
-			animation: fullHeight 0.5s;
-			animation-fill-mode: forwards;
+		&.hover {
+			#{$self}__body {
+				border-color: $accent;
+				position: absolute;
+				z-index: 2;
+				width: 100%;
+				top: 0px;
+			}
+	
+			#{$self}__hidden {
+				animation: fullHeight 0.5s;
+				animation-fill-mode: forwards;
+			}
 		}
 	}
 
@@ -124,8 +129,11 @@
 	}
 
 	&__hidden {
-		max-height: 0;
-		overflow: hidden;
+
+		@include media('>xxs') {
+			max-height: 0;
+			overflow: hidden;
+		}
 		
 		&::before {
 			display: block;

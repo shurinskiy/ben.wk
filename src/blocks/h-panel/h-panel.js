@@ -12,5 +12,7 @@ import { menuToggle } from "../../js/libs/menuToggle";
 
 	// открытие и закрытие меню, свайпом на мобильных устройствах
 	navi.addEventListener('swiped-left', (e) => menu.menuClose(e));
+	// для совместимости со скрывающимся сайдбаром
+	document.querySelector('.layout__a-toggle')?.addEventListener('click', (e) => menu.menuClose());
 
 })();

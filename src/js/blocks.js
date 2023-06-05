@@ -8,3 +8,4 @@ import "../blocks/feed/feed.js";
 import "../blocks/card-ex/card-ex.js";
 import "../blocks/card-ev/card-ev.js";
 import "../blocks/filter/filter.js";
+import "../blocks/layout/layout.js";

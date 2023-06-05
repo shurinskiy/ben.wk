@@ -28,7 +28,7 @@
 			<a class="h-panel__logo" href="./"><img src="./images/logo.svg" alt=""></a>
 			<div class="h-panel__navi">
 				<button class="h-panel__navi-close"></button>
-				<nav class="h-panel__menu" data-scroll-lock-scrollable>
+				<nav class="h-panel__menu">
 					<a class="h-panel__link" href="./">События</a>
 					<a class="h-panel__link" href="./experts.html">Эксперты</a>
 					<a class="h-panel__link" href="./">Предприниматели</a>
@@ -60,19 +60,21 @@
 	</div>
 </div>
 
-<div class="layout container">
-	<aside class="layout__aside layout__aside_blind">
-		<div class="layout__a-inner filter">
+<div class="layout layout_aside-blind container">
+	<aside class="layout__aside">
+		<button class="layout__a-toggle"></button>
+		<button class="layout__a-close"></button>
+		<div class="layout__a-inner filter" data-scroll-lock-scrollable>
 			<div class="filter__block">
 				<h3 class="filter__title">Участие</h3>
-				<div class="filter__items">
-					<button class="filter__item">Онлайн</button>
+				<div class="filter__items" data-hidden="6">
+					<button class="filter__item active">Онлайн</button>
 					<button class="filter__item">Офлайн</button>
 				</div>
 			</div>
 			<div class="filter__block">
 				<h3 class="filter__title">Языки</h3>
-				<div class="filter__items">
+				<div class="filter__items" data-hidden="5">
 					<button class="filter__item">Казахский</button>
 					<button class="filter__item">Русский</button>
 					<button class="filter__item">Английский</button>
@@ -80,7 +82,7 @@
 			</div>
 			<div class="filter__block">
 				<h3 class="filter__title">Формат</h3>
-				<div class="filter__items">
+				<div class="filter__items" data-hidden="5">
 					<button class="filter__item">Платные</button>
 					<button class="filter__item">Бесплатные</button>
 					<button class="filter__item">Скидки</button>
@@ -88,8 +90,8 @@
 			</div>
 			<div class="filter__block">
 				<h3 class="filter__title">Город</h3>
-				<div class="filter__items">
-					<button class="filter__item">Алматы</button>
+				<div class="filter__items" data-hidden="5">
+					<button class="filter__item active">Алматы</button>
 					<button class="filter__item">Астана</button>
 					<button class="filter__item">Шымкент</button>
 					<button class="filter__item">Актобе</button>
@@ -100,7 +102,6 @@
 					<button class="filter__item">Семей</button>
 					<button class="filter__item">Павлодар</button>
 				</div>
-				<button class="filter__showall">Показать все</button>
 			</div>
 			<div class="filter__block">
 				<h3 class="filter__title">Направление</h3>
@@ -108,9 +109,9 @@
 					<input class="filter__form-search" type="text" placeholder="Поиск по направлениям">
 					<button class="filter__form-submit" type="submit"></button>
 				</div>
-				<div class="filter__items">
+				<div class="filter__items" data-hidden="5">
 					<button class="filter__item">Маркетинг</button>
-					<button class="filter__item">IT</button>
+					<button class="filter__item active">IT</button>
 					<button class="filter__item">Управление</button>
 					<button class="filter__item">Экономика</button>
 					<button class="filter__item">Финансы</button>
@@ -120,7 +121,6 @@
 					<button class="filter__item">Менеджмент</button>
 					<button class="filter__item">Трудоустройство</button>
 				</div>
-				<button class="filter__showall">Показать все</button>
 			</div>
 			<button class="filter__clear">Очистить</button>
 		</div>

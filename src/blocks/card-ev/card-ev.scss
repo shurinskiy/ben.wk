@@ -1,6 +1,5 @@
 .card-ev {
 	$self: &;
-	$self: &;
 	box-sizing: border-box;
 	position: relative;
 
@@ -9,19 +8,24 @@
 		to { max-height: 200px; }
 	}
 
-	&_blind.hover {
-		
-		#{$self}__body {
-			border-color: $accent;
-			position: absolute;
-			z-index: 2;
-			width: 100%;
-			top: 0;
+	&_blind {
+		@include media('<=xxs') {
+			clear: both;
 		}
+		
+		&.hover {
+			#{$self}__body {
+				border-color: $accent;
+				position: absolute;
+				z-index: 2;
+				width: 100%;
+				top: 0;
+			}
 
-		#{$self}__hidden {
-			animation: fullHeight 0.5s;
-			animation-fill-mode: forwards;
+			#{$self}__hidden {
+				animation: fullHeight 0.5s;
+				animation-fill-mode: forwards;
+			}
 		}
 	}
 
@@ -125,8 +129,11 @@
 	}
 
 	&__hidden {
-		max-height: 0;
-		overflow: hidden;
+
+		@include media('>xxs') {
+			max-height: 0;
+			overflow: hidden;
+		}
 		
 		&::before {
 			display: block;

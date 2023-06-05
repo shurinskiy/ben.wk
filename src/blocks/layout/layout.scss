@@ -4,16 +4,82 @@
 	grid-template-columns: 290px 1fr;
 	grid-gap: 24px;
 
+	&_aside-blind {
+		@include media('<=md') {
+			display: block;
+
+			#{$self}__a-toggle {
+				display: block;
+			}
+
+			#{$self}__aside {
+				padding: 60px 0 20px;
+				background-color: #fff;		
+				box-shadow: 5px 0 20px rgba(0, 0, 0, 0.1);
+				box-sizing: border-box;
+				padding: 50px 20px 20px;
+				transition: right 0.3s ease-out;
+				position: fixed;
+				height: 100vh;
+				height: calc(var(--vh, 1vh) * 100);
+				z-index: 10;
+				right: -340px; top: 0;
+				max-width: 340px;
+				width: 100%;
+					
+				#{$self}__a-toggle {
+					display: block;
+				}
+				
+				#{$self}__a-close {
+					display: block;
+				}
+					
+				&.opened {
+					right: 0;
+				}
+			}
+		}
+	}
+	
+
 	&__aside {
 		grid-column: span 1;
+	}
 
-		&_blind {
+	&__a-toggle {
+		@extend %reset-button;
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		z-index: 2;
+		transform: translate(-100%,-50%);
+		width: 40px;
+		height: 50px;
+		box-shadow: -7px 0 7px rgba(0,0,0,.1);
+		border-radius: 100px 0 0 100px;
+		background: url('#{$images-path}/icons-sprite.svg#icon-side-view-blue') left 20px center/6px 24px no-repeat #fff;
+	}
 
-		}
+	&__a-close {
+		@extend %reset-button;
+		display: none;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		width: 30px;
+		height: 30px;
+		background: url('#{$images-path}icons-sprite.svg#icon-close-view-black') center / 20px 20px no-repeat transparent;
+		opacity: 0.55;
 	}
 
 	&__a-inner {
 		
+		@include media('<=md') {
+			overflow: auto;
+			max-height: 100%;
+		}
 	}
 	
 	&__main {
