@@ -31,6 +31,7 @@
 			backdrop-filter: blur(15px);
 			align-items: flex-start;
 			flex-flow: column nowrap;
+			overflow: auto;
 
 			width: 100%;
 			height: 100vh;
@@ -38,8 +39,8 @@
 			position: fixed;
 			z-index: 12;
 			top: 0;
-			left: -350px; 
-			max-width: 350px;
+			left: -360px; 
+			max-width: 360px;
 			transition: left 0.2s linear;
 	
 			&.opened {
@@ -79,7 +80,7 @@
 		@include media('<=md') {
 			flex-flow: column nowrap;
 			align-items: stretch;
-			overflow: auto;
+			// overflow: auto;
 			width: 100%;
 			padding-bottom: 10px;
 			margin: 0 0 25px;
@@ -108,6 +109,7 @@
 	}
 
 	&__search {
+		box-sizing: border-box;
 		width: 100%;
 		max-width: 390px;
 		margin-left: auto;
