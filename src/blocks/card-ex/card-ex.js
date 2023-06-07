@@ -1,10 +1,10 @@
 (() => {
 
 	document.querySelectorAll('.card-ex_blind').forEach(($item) => {
-		const styles = window.getComputedStyle($item);
+		const { clear } = window.getComputedStyle($item);
 
 		$item.addEventListener('mouseenter', (e) => {
-			if (styles.clear !== 'none') return;
+			if (clear !== 'none') return;
 
 			let height = $item.querySelector(':first-child').offsetHeight - 1;
 			$item.style.height = `${height}px`;
@@ -12,7 +12,7 @@
 		});
 		
 		$item.addEventListener('mouseleave', (e) => {
-			if (styles.clear !== 'none') return;
+			if (clear !== 'none') return;
 
 			$item.style.height = '';
 			$item.classList.remove('hover');
