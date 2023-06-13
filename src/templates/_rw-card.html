@@ -1,0 +1,28 @@
+<div class="card-rw @@if(this.cls){@@cls}">
+	<h3 class="card-rw__title">Акпантокпантурар&shy;кожа Аккарагозайымсулу</h3>
+	<div class="card-rw__rating rating" data-rate="@@if(this.rate){@@rate}">
+		<span class="rating__star"></span>
+		<span class="rating__star"></span>
+		<span class="rating__star"></span>
+		<span class="rating__star"></span>
+		<span class="rating__star"></span>
+	</div>
+	<div class="card-rw__row">
+		<h4>Какой запрос</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</p>
+	</div>
+	<div class="card-rw__row">
+		<h4>Какой результат</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+	</div>
+	<div class="card-rw__row">
+		<h4>Комментарий</h4>
+		<p> Aenean condimentum metus ut volutpat elementum. Cras posuere faucibus eros, at pulvinar felis ultrices quis.</p>
+	</div>
+	@@if(this.advise) {
+		<button class="card-rw__reaction card-rw__reaction_advise">Рекомендую</button>
+	}
+	@@if(!this.advise) {
+		<button class="card-rw__reaction card-rw__reaction_condemn">Не рекомендую</button>
+	}
+</div>

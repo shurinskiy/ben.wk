@@ -1,0 +1,145 @@
+.intro {
+	$self: &;
+	margin-bottom: 32px;
+	@keyframes show_fade { from { opacity: 0; } to { opacity: 1; }}
+
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 24px;
+
+		@include media('<=sm') {
+			display: block;
+		}
+	}
+
+	&__side {
+		grid-column: span 1;
+		display: flex;
+		flex-flow: column nowrap;
+
+		@include media('<=sm') {
+			margin-bottom: 32px;
+		}
+	}
+
+	&__tags {
+		margin-bottom: 24px;
+
+		.tag:not(:last-child) {
+			margin-right: 5px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__info {
+		display: flex;
+		margin-bottom: 24px;
+	}
+
+	&__rating {
+		display: flex;
+		align-items: center;
+		margin-right: 40px;
+	}
+
+	&__rating-stars {
+		margin-right: 20px;
+	}
+	
+	&__rating-count {
+		padding-top: 4px;
+		font-family: "RM", sans-serif;
+		font-size: 14px;
+		line-height: 1.1;
+	}
+
+	&__address {
+		color: #000;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		
+		&::before {
+			display: block;
+			content: '';
+			width: 14px;
+			height: 18px;
+			background: url('#{$images-path}icons-sprite.svg#icon-geo-view-orange') center / contain no-repeat transparent;
+			flex-shrink: 0;
+			margin-right: 16px;
+		}
+	}
+
+	&__text {
+		margin-bottom: auto;
+		line-height: 1.5;
+	}
+
+	&__price {
+		color: $accent;
+		font-family: "RB", sans-serif;
+		font-size: 24px;
+		margin-bottom: 24px;
+	}
+
+	&__bar {
+		width: 100%;
+		max-width: 530px;
+	}
+
+	&__image {
+		grid-column: span 1;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__label {
+		box-sizing: border-box;
+		position: absolute;
+		left: 8px;
+		top: 8px;
+		max-width: calc(100% - 16px);
+		font-family: "RM", sans-serif;
+		font-size: 12px;
+		color: #fff;
+		background-color: $accent;
+		border-radius: 50px;
+		padding: 5px 16px;
+	}
+
+	&__panel {
+		display: none;
+		box-sizing: border-box;
+		animation: show_fade 0.4s;
+		position: fixed;
+		z-index: 2;
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.16);
+		max-width: 550px;
+		width: 100%;
+		padding: 8px 16px;
+		border-radius: 4px;
+		top: 105px;
+		right: calc((100vw - 1280px) / 2);
+
+		@include media('<=1320px') {
+			right: 20px;
+		}
+
+		@include media('<=md') {
+			top: 90px;
+		}
+
+		&.showed {
+			display: flex;
+		}
+	}
+}

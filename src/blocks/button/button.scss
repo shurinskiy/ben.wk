@@ -6,7 +6,6 @@
 	padding: 12px 16px;
 	border-radius: 4px;
 	background-color: $base;
-	box-shadow: 0px 4px 12px rgba(52, 60, 136, 0.4);
 	font-family: "RM", sans-serif;
 	text-decoration: none;
 	font-size: 16px;
@@ -26,9 +25,21 @@
 		background-color: transparent;
 	}
 	
+	&_shadow {
+		box-shadow: 0px 4px 12px rgba(52, 60, 136, 0.4);
+
+		&#{$self}_accent {
+			box-shadow: 0px 4px 12px rgba(245, 93, 62, 0.4);
+		}
+	}
+
 	&_accent {
 		background-color: $accent;
-		box-shadow: 0px 4px 12px rgba(245, 93, 62, 0.4);
+	}
+
+	&_clean {
+		background-color: transparent;
+		color: $base;
 	}
 
 	&_login::before {

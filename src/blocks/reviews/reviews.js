@@ -1,20 +1,19 @@
 import Swiper, { Navigation } from 'swiper';
 
 (() => {
-
-	document.querySelectorAll('.feed__slider')?.forEach(($slider, i) => {
+	document.querySelectorAll('.reviews__slider')?.forEach(($slider, i) => {
 		let swiper = new Swiper($slider, {
 			modules: [Navigation],
 			navigation: {
-				nextEl: `.feed__navigation_${i} .feed__next`,
-				prevEl: `.feed__navigation_${i} .feed__prev`,
+				nextEl: `.reviews__navigation_${i} .reviews__next`,
+				prevEl: `.reviews__navigation_${i} .reviews__prev`,
 			},
 			on: {
 				beforeInit: function(el) {
 					$slider
-					.querySelector('.feed__navigation')
+					.querySelector('.reviews__navigation')
 					?.classList
-					.add(`feed__navigation_${i}`);
+					.add(`reviews__navigation_${i}`);
 				},
 			},
 			breakpoints: {

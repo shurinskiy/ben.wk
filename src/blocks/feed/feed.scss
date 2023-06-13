@@ -11,6 +11,23 @@
 	
 	&__tags {
 		margin-bottom: 18px;
+		display: flex;
+		flex-flow: row wrap;
+		margin-left: -8px;
+		margin-right: -8px;
+		
+		@include media('<=md') {
+			margin-left: -4px;
+			margin-right: -4px;
+		}
+	}
+
+	&__tag {
+		margin: 0 8px 16px;
+		
+		@include media('<=md') {
+			margin: 0 4px 8px;
+		}
 	}
 
 	&__slider {
@@ -29,6 +46,7 @@
 			z-index: 2;
 		}
 	}
+	
 	&__slide {
 		height: auto;
 

@@ -1,0 +1,27 @@
+.bar {
+	$self: &;
+	display: flex;
+	background-color: #fff;
+
+	&__buttons {
+		display: flex;
+		margin-right: 24px;
+		flex-grow: 1;
+	}
+
+	&__button.button {
+		box-sizing: border-box;
+		justify-content: center;
+		flex-shrink: 1;
+		width: 100%;
+		max-width: 185px;
+
+		&:not(:last-child) {
+			margin-right: 24px;
+		}
+	}
+
+	&__share {
+
+	}
+}

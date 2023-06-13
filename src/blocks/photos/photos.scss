@@ -1,0 +1,61 @@
+.photos {
+	$self: &;
+	margin-bottom: 32px;
+
+	&__inner {
+
+	}
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__slider {
+		padding-bottom: 70px;
+		
+		@include media('<=xs') {
+			padding-bottom: 0;
+		}
+	
+		.swiper-wrapper {
+			z-index: 2;
+		}
+	}
+
+	&__slide {
+		cursor: pointer;
+		border-radius: 4px;
+		height: 170px;
+		overflow: hidden;
+		
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	&__navigation {
+		position: absolute;
+		bottom: 10px;
+		left: 0;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 1;
+
+		@include media('<=xs') {
+			display: none;
+		}
+	}
+
+	&__prev {
+
+	}
+
+	&__next {
+
+	}
+}

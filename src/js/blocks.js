@@ -9,3 +9,8 @@ import "../blocks/card-ex/card-ex.js";
 import "../blocks/card-ev/card-ev.js";
 import "../blocks/filter/filter.js";
 import "../blocks/layout/layout.js";
+import "../blocks/intro/intro.js";
+import "../blocks/videos/videos.js";
+import "../blocks/video/video.js";
+import "../blocks/photos/photos.js";
+import "../blocks/reviews/reviews.js";

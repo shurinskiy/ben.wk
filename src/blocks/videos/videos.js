@@ -2,19 +2,20 @@ import Swiper, { Navigation } from 'swiper';
 
 (() => {
 
-	document.querySelectorAll('.feed__slider')?.forEach(($slider, i) => {
+	document.querySelectorAll('.videos__slider')?.forEach(($slider, i) => {
 		let swiper = new Swiper($slider, {
 			modules: [Navigation],
+			threshold: 10,
 			navigation: {
-				nextEl: `.feed__navigation_${i} .feed__next`,
-				prevEl: `.feed__navigation_${i} .feed__prev`,
+				nextEl: `.videos__navigation_${i} .videos__next`,
+				prevEl: `.videos__navigation_${i} .videos__prev`,
 			},
 			on: {
 				beforeInit: function(el) {
 					$slider
-					.querySelector('.feed__navigation')
+					.querySelector('.videos__navigation')
 					?.classList
-					.add(`feed__navigation_${i}`);
+					.add(`videos__navigation_${i}`);
 				},
 			},
 			breakpoints: {
@@ -30,17 +31,13 @@ import Swiper, { Navigation } from 'swiper';
 					spaceBetween: 14,
 					slidesPerView: 2
 				},
-				780: {
+				1100: {
 					spaceBetween: 16,
 					slidesPerView: 3
 				},
-				1100: {
-					spaceBetween: 16,
-					slidesPerView: 4
-				},
 				1280: {
 					spaceBetween: 24,
-					slidesPerView: 4
+					slidesPerView: 3
 				}
 			}
 		});

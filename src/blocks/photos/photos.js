@@ -1,20 +1,28 @@
 import Swiper, { Navigation } from 'swiper';
+import scrollLock from 'scroll-lock';
+import { makeModalFrame } from "../../js/libs/modal";
 
 (() => {
 
-	document.querySelectorAll('.feed__slider')?.forEach(($slider, i) => {
+	const modal = makeModalFrame({ 
+		select: '.photos__slide', 
+		scrollLock,
+		open: function(modal) {}
+	});
+
+	document.querySelectorAll('.photos__slider')?.forEach(($slider, i) => {
 		let swiper = new Swiper($slider, {
 			modules: [Navigation],
 			navigation: {
-				nextEl: `.feed__navigation_${i} .feed__next`,
-				prevEl: `.feed__navigation_${i} .feed__prev`,
+				nextEl: `.photos__navigation_${i} .photos__next`,
+				prevEl: `.photos__navigation_${i} .photos__prev`,
 			},
 			on: {
 				beforeInit: function(el) {
 					$slider
-					.querySelector('.feed__navigation')
+					.querySelector('.photos__navigation')
 					?.classList
-					.add(`feed__navigation_${i}`);
+					.add(`photos__navigation_${i}`);
 				},
 			},
 			breakpoints: {
