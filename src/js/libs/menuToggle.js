@@ -87,8 +87,8 @@ export const menuToggle = (menu, toggles, options = {}) => {
 
 
 		omitToClose(e) {
-			const omits = this.options.omitToClose.split(",").map((item) => item.trim());
-			return omits.some(omit => !!e.target.closest(`${omit}`));
+			const omits = this.options.omitToClose?.split(",").map((item) => item.trim());
+			return omits?.some(omit => !!e.target.closest(`${omit}`));
 		}
 
 		

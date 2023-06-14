@@ -13,12 +13,11 @@
 			}
 
 			#{$self}__aside {
-				padding: 60px 0 20px;
 				background-color: #fff;		
-				box-shadow: 5px 0 20px rgba(0, 0, 0, 0.1);
+				box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
 				box-sizing: border-box;
 				padding: 50px 20px 20px;
-				transition: right 0.3s ease-out;
+				transition: right 0.2s linear;
 				position: fixed;
 				height: 100vh;
 				height: calc(var(--vh, 1vh) * 100);
