@@ -45,7 +45,7 @@
 		}
 		
 		&.active {
-			font-family: "RB", sans-serif;
+			-webkit-text-stroke: 0.4px #fff;
 			
 			&::before {
 				transition: width 0.3s;
