@@ -1,0 +1,50 @@
+.ln-faq {
+	$self: &;
+	@keyframes show_fade { from { opacity: 0; } to { opacity: 1; }}
+
+	&__inner {
+		padding-top: 130px;
+		padding-bottom: 140px;
+		background: url('#{$images-path}ic-background-faq.svg') center right 50px / auto no-repeat transparent;
+	}
+
+	&__title {
+		margin-bottom: 55px;
+	}
+
+	&__items {
+
+	}
+
+	&__item {
+		padding: 24px 0;
+		
+		&:not(:last-child) {
+			border-bottom: 1px solid #ccc;
+		}
+	}
+	
+	&__i-question {
+		font-size: 20px;
+		cursor: pointer;
+		padding: 0 0 0 35px ;
+		background: url('#{$images-path}icons-sprite.svg#icon-plus-view-orange') center left / 19px 19px no-repeat transparent;
+		
+		&.active {
+			background: url('#{$images-path}icons-sprite.svg#icon-minus-view-orange') center left / 19px 3px no-repeat transparent;
+
+			& ~ #{$self}__i-answer {
+				display: block;
+			}
+ 		}
+	}
+	
+	&__i-answer {
+		display: none;
+		animation: show_fade 0.4s;
+		font-size: 14px;
+		margin: 24px 0 0 55px;
+		padding-left: 15px;
+		border-left: 1px solid $accent;
+	}
+}

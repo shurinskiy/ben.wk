@@ -1,6 +1,7 @@
 (() => {
 	// поведение хедера при скролле
 	const $header = document.querySelector('.header');
+	if (! $header) return;
 
 	document.addEventListener("scroll", (e) => {
 		$header.classList[(e.target.documentElement.scrollTop > 30) ? 'add':'remove']('header_scrolled');

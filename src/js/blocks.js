@@ -14,3 +14,5 @@ import "../blocks/videos/videos.js";
 import "../blocks/video/video.js";
 import "../blocks/photos/photos.js";
 import "../blocks/reviews/reviews.js";
+import "../blocks/ln-faq/ln-faq.js";
+import "../blocks/ln-how/ln-how.js";

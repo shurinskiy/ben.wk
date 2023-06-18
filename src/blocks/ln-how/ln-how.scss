@@ -1,0 +1,104 @@
+.ln-how {
+	$self: &;
+	background: url('#{$images-path}landing-background-2.png') center / cover no-repeat transparent;
+	@keyframes show_fade { from { opacity: 0; } to { opacity: 1; }}
+
+	&__inner {
+		padding-top: 130px;
+		padding-bottom: 110px;
+		background: url('#{$images-path}ic-background-how.svg') center right 50px / auto no-repeat transparent;
+		display: flex;
+		flex-flow: column nowrap;
+		color: #fff;
+	}
+
+	&__title {
+		margin-bottom: 100px;
+	}
+
+	&__tab {
+		margin-bottom: 70px;
+		max-width: 720px;
+	}
+
+	&__t-caps {
+		border-bottom: 1px solid #fff;
+		margin-bottom: 48px;
+	}
+
+	&__t-cap {
+		@extend %reset-button;
+		font-family: "RR", sans-serif;
+		font-size: 20px;
+		padding: 24px 45px;
+		position: relative;
+
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+			height: 6px;
+			width: 0;
+			background-color: $accent;
+		}
+		
+		&.active {
+			font-family: "RB", sans-serif;
+			
+			&::before {
+				transition: width 0.3s;
+				width: 100%;
+			}
+		}
+	}
+
+	&__t-blocks {
+
+	}
+
+	&__t-block {
+		display: none;
+		animation: show_fade 0.4s;
+		
+		&.active {
+			display: block;
+		}
+	}
+
+	&__t-text {
+		font-size: 20px;
+		margin-bottom: 48px;
+	}
+	
+	&__t-list {
+		counter-reset: list_ctr;
+		min-height: 350px;
+	}
+
+	&__row {
+		margin-bottom: 24px;
+		display: flex;
+		font-size: 17px;
+		font-family: "RL", sans-serif;
+
+		&::before {
+			display: block;
+			counter-increment: list_ctr;
+			content: "0" counter(list_ctr);
+			font-family: "RB", sans-serif;
+			margin-right: 16px;
+			color: #878787;
+			font-size: 24px;
+			margin-top: -3px;
+		}
+	}
+
+	&__button {
+		align-self: center;
+		// max-width: 200px;
+		// margin: 0 auto;
+		// width: 100%;
+	}
+}

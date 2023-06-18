@@ -1,0 +1,16 @@
+.ln-buttons {
+	$self: &;
+	background: url('#{$images-path}landing-background-1.png') center top / cover no-repeat transparent;
+
+	&__inner {
+		padding: 120px 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 550px;
+	}
+
+	&__item {
+		margin: 0 20px;
+	}
+}

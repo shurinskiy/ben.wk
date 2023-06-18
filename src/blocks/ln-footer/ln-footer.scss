@@ -1,0 +1,106 @@
+.ln-footer {
+	$self: &;
+
+	&__top {
+		padding-top: 55px;
+		padding-bottom: 55px;
+		display: flex;
+
+	}
+
+	&__logo {
+		box-sizing: border-box;
+		padding-right: 24px;
+		width: 100%;
+		max-width: 200px;
+		
+		img, a { display: block; }
+	}
+	
+	&__navi {
+		padding-right: 24px;
+		max-width: 235px;
+		min-width: 140px;
+		width: 100%;
+
+		a {
+			display: block;
+			text-decoration: none;
+			color: #292A30;
+			margin-bottom: 15px;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__docs {
+		padding-right: 24px;
+		max-width: 275px;
+		min-width: 200px;
+		width: 100%;
+
+		a {
+			display: block;
+			text-decoration: none;
+			color: #292A30;
+			margin-bottom: 10px;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__contacts {
+		margin-left: auto;
+	}
+
+	&__contact {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		color: #292A30;
+		line-height: 24px;
+		margin-bottom: 18px;
+		white-space: nowrap;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			width: 18px;
+			height: 18px;
+			flex-shrink: 0;
+			margin-right: 14px;
+			background-color: transparent;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+		
+		&_tel::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-soc-phone-view-blue');			
+		}
+		
+		&_wapp::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-soc-wapp-view-blue');			
+		}
+		
+		&_tgm::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-tgm-view-blue');			
+			background-size: 18px 16px;
+		}
+	}
+
+	&__bottom {
+		text-align: center;
+		padding: 16px 20px;
+		color: #fff;
+		background: url('#{$images-path}landing-background-2.png') center / cover no-repeat transparent;
+	}
+}
