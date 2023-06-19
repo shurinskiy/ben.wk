@@ -6,20 +6,100 @@
 		padding-top: 100px;
 		padding-bottom: 120px;
 		color: #fff;
+		
+		@include media('<=xs') {
+			padding-top: 50px;
+			padding-bottom: 70px;
+		}
 	}
 
 	&__top {
 		display: flex;
 		align-items: center;
 		margin-bottom: 95px;
+		
+		@include media('<=xxxs') {
+			margin-bottom: 50px;
+		}
 	}
 
 	&__logo {
 		margin-right: auto;
 	}
 
-	&__button {
+	&__m-button {
 		margin-left: 24px;
+
+		&:last-child {
+			display: none;
+
+			@include media('<=xs') {
+				display: flex;
+			}
+		}
+
+		@include media('<=xs') {
+			display: flex;
+			margin: 0 auto 24px;
+			max-width: 205px;
+		}
+	}
+
+	&__menu {
+		box-sizing: border-box;
+
+		@include media('<=xs') {
+			box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.3);
+			background-color: rgba(7, 11, 12, 0.8);
+			padding: 70px 20px 20px;
+			backdrop-filter: blur(15px);
+			align-items: flex-start;
+			flex-flow: column nowrap;
+			overflow: auto;
+
+			width: 100%;
+			height: 100vh;
+			height: calc(var(--vh, 1vh) * 100);
+			position: fixed;
+			z-index: 12;
+			top: 0;
+			right: -370px; 
+			max-width: 360px;
+			transition: right 0.2s linear;
+	
+			&.opened {
+				right: 0;
+			}
+		}
+	}
+
+	&__m-close {
+		@extend %reset-button;
+		display: none;
+		position: absolute;
+		z-index: 1;
+		top: 10px;
+		left: 10px;
+		width: 30px;
+		height: 30px;
+		background: url('#{$images-path}icons-sprite.svg#icon-close-view-white') center / 20px 20px no-repeat transparent;
+		opacity: 0.55;
+
+		@include media('<=xs') {
+			display: block;
+		}
+	}
+
+	&__m-toggle {
+		@extend %reset-button;
+		display: none;
+		width: 40px;
+		height: 40px;
+		background: url('#{$images-path}icons-sprite.svg#icon-menu-view-white') center / 30px 23px no-repeat transparent;
+		
+		@include media('<=xs') {
+			display: block;
+		}
 	}
 
 	&__content {
@@ -38,6 +118,17 @@
 		max-width: 670px;
 		font-size: 20px;
 		margin-bottom: 80px;
+		
+		@include media('<=xs') {
+			font-size: 18px;
+			line-height: 28px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 16px;
+			line-height: 24px;
+			margin-bottom: 65px;
+		}
 	}
 
 	&__c-button {

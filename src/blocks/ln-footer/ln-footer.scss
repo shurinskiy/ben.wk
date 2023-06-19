@@ -6,6 +6,9 @@
 		padding-bottom: 55px;
 		display: flex;
 
+		@include media('<=xs') {
+			display: block;			
+		}
 	}
 
 	&__logo {
@@ -15,9 +18,14 @@
 		max-width: 200px;
 		
 		img, a { display: block; }
+
+		@include media('<=xs') {
+			margin-bottom: 48px;
+		}
 	}
 	
 	&__navi {
+		box-sizing: border-box;
 		padding-right: 24px;
 		max-width: 235px;
 		min-width: 140px;
@@ -32,13 +40,20 @@
 			&:hover {
 				text-decoration: underline;
 			}
+
+			@include media('<=xs') {
+				margin-bottom: 10px;
+				max-width: none;
+				min-width: auto;
+			}
 		}
 	}
 
 	&__docs {
+		box-sizing: border-box;
 		padding-right: 24px;
 		max-width: 275px;
-		min-width: 200px;
+		min-width: 185px;
 		width: 100%;
 
 		a {
@@ -50,6 +65,12 @@
 			&:hover {
 				text-decoration: underline;
 			}
+		}
+
+		@include media('<=xs') {
+			margin-bottom: 48px;
+			max-width: none;
+			min-width: auto;
 		}
 	}
 

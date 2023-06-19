@@ -6,10 +6,19 @@
 		padding-top: 130px;
 		padding-bottom: 140px;
 		background: url('#{$images-path}ic-background-faq.svg') top 250px right 50px / auto no-repeat transparent;
+		
+		@include media('<=xs') {
+			padding-top: 90px;
+			padding-bottom: 80px;
+		}
 	}
 
 	&__title {
 		margin-bottom: 55px;
+		
+		@include media('<=xs') {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__items {
@@ -22,6 +31,10 @@
 		&:not(:last-child) {
 			border-bottom: 1px solid #ccc;
 		}
+		
+		@include media('<=xxs') {
+			padding: 18px 0;
+		}
 	}
 	
 	&__i-question {
@@ -32,12 +45,21 @@
 		
 		&.active {
 			background: url('#{$images-path}icons-sprite.svg#icon-minus-view-orange') center left / 19px 3px no-repeat transparent;
-
+			
 			& ~ #{$self}__i-answer {
 				display: block;
 			}
- 		}
-	}
+		}
+		
+		@include media('<=xs') {
+			font-size: 18px;
+			line-height: 24px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 17px;
+		}
+	 }
 	
 	&__i-answer {
 		display: none;

@@ -16,3 +16,4 @@ import "../blocks/photos/photos.js";
 import "../blocks/reviews/reviews.js";
 import "../blocks/ln-faq/ln-faq.js";
 import "../blocks/ln-how/ln-how.js";
+import "../blocks/ln-header/ln-header.js";

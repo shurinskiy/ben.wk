@@ -8,9 +8,26 @@
 		align-items: center;
 		justify-content: space-between;
 		max-width: 550px;
+		
+		@include media('<=xs') {
+			flex-flow: column nowrap;			
+			padding: 90px 20px;
+		}
 	}
 
 	&__item {
 		margin: 0 20px;
+
+		&.ln-button {
+			
+			@include media('<=xs') {
+				width: 100%;
+				max-width: 200px;
+
+				&:not(:last-child) {
+					margin-bottom: 24px;
+				}
+			}
+		}
 	}
 }
