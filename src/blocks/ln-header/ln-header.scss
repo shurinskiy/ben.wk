@@ -50,9 +50,9 @@
 
 		@include media('<=xs') {
 			box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.3);
-			background-color: rgba(7, 11, 12, 0.8);
+			background-color: rgba(3, 3, 12, 0.8);
 			padding: 70px 20px 20px;
-			backdrop-filter: blur(15px);
+			backdrop-filter: blur(10px);
 			align-items: flex-start;
 			flex-flow: column nowrap;
 			overflow: auto;
