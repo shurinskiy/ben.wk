@@ -1,0 +1,26 @@
+.articles {
+	$self: &;
+	margin-bottom: 48px;
+
+	&__inner {
+
+	}
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 24px;
+		
+		@include media('<=sm') {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__item {
+		grid-column: 1 span;
+	}
+}
